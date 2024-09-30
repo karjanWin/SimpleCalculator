@@ -17,20 +17,20 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean package' // Clean and package your application
+                bat 'mvn clean package' // Clean and package your application
             }
         }
 
         stage('Test') {
             steps {
-                sh 'mvn test' // Run unit tests
+                bat 'mvn test' // Run unit tests
             }
         }
 
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('SonarQube') { // 'SonarQube' is the name you configured earlier
-                    sh 'mvn sonar:sonar' // Execute SonarQube analysis
+                    bat 'mvn sonar:sonar' // Execute SonarQube analysis
                 }
             }
         }
