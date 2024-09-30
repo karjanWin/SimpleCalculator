@@ -29,7 +29,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('SonarQube') { // 'SonarQube' is the name you configured earlier
+                withSonarQubeEnv('Sonar-Server') { // 'SonarQube' is the name you configured earlier
                     bat 'mvn sonar:sonar' // Execute SonarQube analysis
                 }
             }
