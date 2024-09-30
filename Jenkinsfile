@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven' // Make sure Maven is installed and configured in Jenkins
+        maven 'Maven-BT' // Make sure Maven is installed and configured in Jenkins
     }
 
     stages {
