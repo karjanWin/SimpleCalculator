@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/SimpleCalculator.git' // Update with your repo URL
+                git 'https://github.com/karjanWin/SimpleCalculator.git' // Update with your repo URL
             }
         }
 
