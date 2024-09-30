@@ -5,10 +5,13 @@ pipeline {
         maven 'Maven-BT' // Make sure Maven is installed and configured in Jenkins
     }
 
-    stages {
+   stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/karjanWin/SimpleCalculator.git' // Update with your repo URL
+                // Use the credentialsId to authenticate to the GitHub repository
+                git url: 'https://github.com/karjanWin/SimpleCalculator.git',
+                    branch: 'master',
+                    credentialsId: 'github-pat'  // Use the ID you set earliero URL
             }
         }
 
